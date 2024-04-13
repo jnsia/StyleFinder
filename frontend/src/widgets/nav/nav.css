@@ -1,0 +1,71 @@
+.menu button {
+  width: 100px;
+  height: 40px;
+  background-color: #161A30;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.login{
+  width: 100px;
+  height: 40px;
+  background-color: #161A30;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.nav-text{
+  color: white;
+  font-size: x-large;
+}
+.menu button:hover {
+  background-color: #e5e5e5;
+  color: black;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container > button {
+  width: 100%;
+  text-align: center;
+}
+.check {
+  /* 선택되지 않은 버튼의 기본 스타일 */
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.check.selected {
+  /* 선택된 버튼의 스3타일 */
+  background-color: #161A30;
+  color: white;
+}
+
+.navbar-center > div {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.check {
+  /* 선택되지 않은 버튼의 기본 스타일 */
+  background-color: white;
+  color: black;
+  font-size: 18px; /* 글자 크기 조정 */
+  padding: 10px 20px; /* 내부 여백 조정 */
+  border-radius: 20px;
+}
+
+.check.selected {
+  /* 선택된 버튼의 스3타일 */
+  background-color: #161A30;
+  color: white;
+}
+
+

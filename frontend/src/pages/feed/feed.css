@@ -1,0 +1,88 @@
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.modal-open-button,
+.modal-close-btn {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  background-color: #ffffff;
+}
+.modal-container {
+  /* 기존 스타일 */
+  z-index: 1000;
+}
+
+.introduction-box {
+  background-color: #f0ece5;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.likebox p {
+  border: 2px solid #f0ece5;
+  padding: 8px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.closebutton {
+  border: 2px solid #f0ece5;
+  padding: 8px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #31304d;
+  color: white;
+}
+
+.custom-button {
+  background-color: #31304d;
+  border-radius: 8px;
+  width: 120px;
+  height: 30px;
+  color: white;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.text-color{
+  color: white;
+}
+
+.hr{
+  border: 3px solid white;
+  width: 760px;
+}
+
+.blackText {
+  color: black;
+}
+
+.abc {
+  display: flex;
+  justify-content: space-between;
+}

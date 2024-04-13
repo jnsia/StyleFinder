@@ -1,0 +1,78 @@
+.save{
+  background-color: #161A30;
+  color: white;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  height: 50px;
+  font-size: medium;
+}
+.custom-button {
+  background-color: #161A30;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 50px;
+}
+
+.option-box {
+  width: 140px;
+  background-color: white;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
+.cancel{
+  color: black;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  height: 50px;
+  font-size: medium;
+}
+.button{
+  background-color: #161A30;
+  color: white;
+  border-radius: 10px;
+  width: 50px;
+  text-align: center;
+  height: 30px;
+  font-size: small;
+}
+.likecate{
+  border: 1px solid black;
+  background-color: white;
+  padding: 6px;
+  margin-right: 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.customFileInputLabel {
+  background-color: #161A30;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.customFileInput {
+  display: none;
+}
+
+.uploadedImage {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+
+.option-box {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+}

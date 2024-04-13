@@ -1,0 +1,92 @@
+buildscript {
+	// queryDsl 버전
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.9'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.d111'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// swagger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+
+	// lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Querydsl
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}:jakarta"
+	annotationProcessor(
+			"jakarta.persistence:jakarta.persistence-api",
+			"jakarta.annotation:jakarta.annotation-api",
+			"com.querydsl:querydsl-apt:${queryDslVersion}:jakarta"
+	)
+
+	// Google Gson
+	implementation 'com.google.code.gson:gson:2.10.1'
+	implementation 'org.json:json:20210307'
+
+
+	// Spring Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	// JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+	//jasypt
+	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
+
+	// aws s3
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+	//mongoDB
+	implementation ('org.springframework.boot:spring-boot-starter-data-mongodb')
+//	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+
+
+
+	// redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+}
+
+tasks.named('bootBuildImage') {
+	builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

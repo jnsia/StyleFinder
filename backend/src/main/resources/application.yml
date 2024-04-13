@@ -1,0 +1,72 @@
+# Port
+server:
+  port: 8081
+
+spring:
+  # MySQL
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(f2wkijzdrQnxzxCZYH+lniBL7ndYX2J5EeEU0AUPmwthb0h6lcz7Ko/yu8h+DqX2SKKvWUWJSFt05ivvE++0Lw==)
+    username: ENC(EOlfe4WYsqJbHOJuHickcw==)
+    password: ENC(chxyvNmguj+G1w3wCHN4TA==)
+
+  # redis
+  data:
+    redis:
+      host: ENC(9hP63pD3WAIs+4sg6muJbuKU/Ie7BdR14pFduMfzpl8=)
+      port: 6379
+      password: ENC(kqyVDX/z7enC3fMN/f9twJnibSCyfdA0)
+
+  # jpa
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+
+  # request multipart file
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# S3
+cloud:
+  aws:
+    s3:
+      bucket: ENC(5+puSTEJWGaV9iB5TF79dT/leVOHSqunB/EsigmI+14=)
+      credentials:
+        access-key: ENC(iprZe9KTXii9++3h2vSGstpVMeYK4PL6mLFB+Oh4AbQ=)
+        secret-key: ENC(uOXn54tQBSwNr+uPjA+6YS+wV+q2/CkabsM6BwTEJDH4r1HsN9iaosAJF9msxPHHBTOSnSDZAls=)
+      region: ap-northeast-2
+    stack:
+      auto: false # EC2의 Spring Cloud 자동 구성 해제
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
+DEFAULT_PROFILE_URL: ENC(jgqAgtjThvOP37bgwQv9hF+pBgojgdPMl/N7rCu0BjtXNhhb/FfsmCN2olI3olWN)
+
+# local MongoDB
+---
+spring:
+  data:
+    mongodb:
+      host: ENC(c/ECBd/OfzjAMwMHNkjajVsEViEIZvuZLOKKuZLrnl8=)
+      port: 27017
+      database: ENC(ph20AB5KkD9X1/UJolVMDBf8syZGBhIV)
+      authentication-database: admin
+      username: ENC(5uXWeieZVQXaVxHIhSzKhA==)
+      password: ENC(6l+429SST+jR2bowaARaG6F2dFLzVjA0)
+---
+# mongoDB 충돌나서 임시조치
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+---
+

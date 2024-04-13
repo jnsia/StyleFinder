@@ -1,0 +1,47 @@
+.input {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* 옵션 박스 컨테이너 */
+.option-box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 옵션 박스 */
+.option-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 8px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+
+/* 옵션 텍스트 */
+.option-box span {
+  margin-right: 8px;
+}
+
+/* 취소 버튼 */
+.option-button {
+  background-color: #f59989;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: x-small;
+  margin-left: 5px;
+}
+
+/* 취소 버튼 호버 상태 */
+.option-button:hover {
+  background-color: #d53b23;
+}
